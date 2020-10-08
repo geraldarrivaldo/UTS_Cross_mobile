@@ -21,9 +21,9 @@
       {{loadedBarang.harga | currency: 'Rp.':true:'2.0'}} <br><br>
       Available: {{loadedBarang.stock}} <br><br>
     </ion-item><br>
-    <ion-title><b>Details Product</b></ion-title><br>
+    <ion-title class="titel"><b>Details Product</b></ion-title><br>
     <ion-item *ngIf="loadedBarang.produk == 'CPU'">
-      <ion-grid>
+      <ion-grid class="grid">
         <ion-row>
           <ion-col size="6">
             Model
@@ -68,7 +68,7 @@
  
     </ion-item>
     <ion-item *ngIf="loadedBarang.produk == 'RAM'">
-      <ion-grid>
+      <ion-grid class="grid">
         <ion-row>
           <ion-col size="6">
             Model
@@ -96,7 +96,7 @@
       </ion-grid>
     </ion-item>
     <ion-item *ngIf="loadedBarang.produk == 'Motherboard'">
-      <ion-grid>
+      <ion-grid class="grid">
         <ion-row>
           <ion-col size="6">
             Model
@@ -124,7 +124,7 @@
       </ion-grid>
     </ion-item>
     <ion-item *ngIf="loadedBarang.produk == 'GPU'">
-      <ion-grid>
+      <ion-grid class="grid">
         <ion-row>
           <ion-col size="6">
             Model

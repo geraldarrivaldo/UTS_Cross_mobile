@@ -21,7 +21,7 @@ export class EditProductPage implements OnInit {
     edittImg2: '',
     edittModel: '',
     edittHarga: 0,
-    edittStok: 0,
+    edittStock: 0,
     edittBaseClock: 0,
     edittBoostClock: 0,
     edittCore: 0,
@@ -51,7 +51,7 @@ export class EditProductPage implements OnInit {
       this.BarangEdit['edittImg2'] = this.loadedEditBarang.imageUrl[1];
       this.BarangEdit['edittModel'] = this.loadedEditBarang.model;
       this.BarangEdit['edittHarga'] = this.loadedEditBarang.harga;
-      this.BarangEdit['edittStok'] = this.loadedEditBarang.stock;
+      this.BarangEdit['edittStock'] = this.loadedEditBarang.stock;
       this.BarangEdit['edittBaseClock'] = this.loadedEditBarang.baseClock;
       this.BarangEdit['edittBoostClock'] = this.loadedEditBarang.boostClock;
       this.BarangEdit['edittCore'] = this.loadedEditBarang.jumlahCore;
@@ -67,7 +67,7 @@ export class EditProductPage implements OnInit {
   editBarang(){
     this.barangService.editBarang(this.loadedEditBarang.id, this.BarangEdit)
     this.router.navigate(['home/admin']);
-    this.editToast();
+    this.toast();
   }
 
 
@@ -93,7 +93,7 @@ export class EditProductPage implements OnInit {
     await alert.present();
   }
 
-  async editToast() {
+  async toast() {
     const toast = await this.toastController.create({
       message: 'Success.',
       duration: 2000,

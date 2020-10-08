@@ -36,7 +36,7 @@ export class AdminPage implements OnInit {
     this.barangService.deleteBarang(barangId);
     slidingItems.close();
     this.router.navigate(['home/admin']);
-    this.deleteToast();
+    this.toast();
     this.ionViewWillEnter();
   }
 
@@ -63,7 +63,7 @@ export class AdminPage implements OnInit {
     await alert.present();
   }
 
-  async deleteToast() {
+  async toast() {
     const toast = await this.toastController.create({
       message: 'Deleted.',
       duration: 2000,

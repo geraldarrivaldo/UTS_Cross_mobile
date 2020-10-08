@@ -7,7 +7,7 @@ import {FormGroup} from '@angular/forms';
   providedIn: 'root'
 })
 export class HomeService {
-  barangHaveStock = [];
+  stockBarang = [];
   private barang: Barang[] = [
     {
       id: 'b1',
@@ -83,16 +83,16 @@ export class HomeService {
   constructor() { }
 
   getAllBarang(){
-    this.barangHaveStock = [];
+    this.stockBarang = [];
     let j = 0;
 
     for (let i = 0 ; i < this.barang.length; i++){
       if (this.barang[i].stock > 0){
-        this.barangHaveStock[j] = this.barang[i];
+        this.stockBarang[j] = this.barang[i];
         j++;
       }
     }
-    return [...this.barangHaveStock];
+    return [...this.stockBarang];
   }
 
   getBarang(barangId: string) {
@@ -110,7 +110,7 @@ export class HomeService {
       nama: data.value.nama,
       model: data.value.model,
       harga: data.value.harga,
-      stock: data.value.stok,
+      stock: data.value.stock,
       baseClock: data.value.baseClock,
       boostClock: data.value.boostClock,
       jumlahCore: data.value.core,
