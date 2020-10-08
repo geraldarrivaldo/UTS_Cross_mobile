@@ -19,7 +19,7 @@
     <ion-title><b>{{loadedBarang.nama}} {{loadedBarang.model}}</b></ion-title><br>
     <ion-item>
       {{loadedBarang.harga | currency: 'Rp.':true:'2.0'}} <br><br>
-      Tersedia: {{loadedBarang.stock}} <br><br>
+      Available: {{loadedBarang.stock}} <br><br>
     </ion-item><br>
     <ion-title><b>Details Product</b></ion-title><br>
     <ion-item *ngIf="loadedBarang.produk == 'CPU'">
